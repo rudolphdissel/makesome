@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input type="text" class="first"/>
+    <input type="text" class="second"/><br />
+    <button class="plus">더해</button>
+    <button class="subtract">빼</button>
+    <button class="multiply">곱해</button>
+    <button class="divide">나눠</button>
+    <button>더 이상의 기능따윈 없어</button>
+    <p class="final">결과:</p>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.plus').on('click',function(){
+            var middle1 = parseInt($('.first').val());
+            var middle2 = parseInt($('.second').val());
+            var result = middle1 + middle2
+            $('.final').text("결과:"+result);
+            console.log('good')
+        })
+        $('.subtract').on('click',function(){
+            var middle1 = parseInt($('.first').val());
+            var middle2 = parseInt($('.second').val());
+            var result = middle1 - middle2
+            $('.final').text("결과:"+result);
+            console.log('good')
+        })
+        $('.multiply').on('click',function(){
+            var middle1 = parseInt($('.first').val());
+            var middle2 = parseInt($('.second').val());
+            var result = middle1 * middle2
+            $('.final').text("결과:"+result);
+            console.log('good')
+        })
+        $('.divide').on('click',function(){
+            var middle1 = parseInt($('.first').val());
+            var middle2 = parseInt($('.second').val());
+            var result = middle1 / middle2
+            $('.final').text("결과:"+result);
+            console.log('good')
+        })
+
+
+    })
+    
+  </script>
+</html>
